@@ -1,0 +1,283 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- random_data
+- affirmation
+- user_give_name
+- get_hint
+- pick_something
+- affirm_to_play
+- deny_to_play
+- give_direction
+- give_son_answer
+- give_math_answer
+- look_at
+- activate
+- play_activity
+- use
+- send
+
+
+entities:
+#General
+- name
+- lives
+- current_puzzle_to_solve
+- picked_item
+- looked_item
+- current_room
+- is_game_over
+#Hosna Room
+- direction
+- son_puzzle_hint_count
+- son_answer
+- is_son_puzzle_solved
+- is_already_started
+- math_puzzle_hint_count
+- east_puzzle_hint_count
+- north_puzzle_hint_count
+- south_puzzle_hint_count
+- chess_puzzle_hint_count
+- math_answer
+- is_math_puzzle_solved
+- play_action
+## Tareq Room
+- activate_puzzle_hint_count
+- is_activate_solved
+- wires_puzzle_hint_count
+- signal_puzzle_hint_count
+- used_item
+- signal_position
+- is_easter_egg_solved
+- is_wires_puzzle_solved
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+
+  lives:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: lives
+  
+  current_puzzle_to_solve:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: current_puzzle_to_solve
+
+  son_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: son_puzzle_hint_count
+
+  math_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: math_puzzle_hint_count
+
+  east_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: east_puzzle_hint_count
+
+  north_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: north_puzzle_hint_count
+
+  south_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: south_puzzle_hint_count
+
+  chess_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: chess_puzzle_hint_count
+
+  wires_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: wires_puzzle_hint_count
+
+  signal_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: signal_puzzle_hint_count
+
+  activate_puzzle_hint_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: activate_puzzle_hint_count
+
+  picked_item:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: picked_item
+
+  looked_item:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: looked_item
+
+  direction:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: direction
+
+  son_answer:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: son_answer
+
+  math_answer:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: math_answer
+
+  used_item:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: used_item
+
+  signal_position:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: signal_position
+  
+  is_son_puzzle_solved:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_son_puzzle_solved
+
+  is_already_started:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_already_started
+
+  is_math_puzzle_solved:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_math_puzzle_solved
+
+  is_activate_solved:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_activate_solved
+
+  is_game_over:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_game_over
+
+  is_easter_egg_solved:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_easter_egg_solved
+
+  is_wires_puzzle_solved:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_wires_puzzle_solved
+
+  current_room:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: current_room
+      
+  play_action:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: play_action
+
+responses:
+  utter_random_thing:
+  - text: "I am not understanding....Please ask again!"
+  utter_affirmation:
+  - text: If you have any questions or need assistance, feel free to let me know!
+
+
+actions:
+- utter_random_thing
+- utter_affirmation
+- action_say_name
+- action_default_fallback
+- action_get_hints
+- action_pick_something
+- action_handle_affirmation
+- action_handle_direction
+- action_son_puzzle
+- action_math_puzzle
+- action_look_at
+- action_activate_puzzle
+- action_play_activity
+- action_use_item
+- action_send_signal

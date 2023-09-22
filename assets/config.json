@@ -1,0 +1,11 @@
+{
+    "escape_room_name": "Your Personal Nightmare",
+    "chatbot_name": "Mr.Nightmare",
+    "messagebox_caption": "Message",
+    "send_button_caption": "Send",
+    "user_name": "You",
+    "id": "your_personal_nightmare",
+    "background-image": "cave.jpg",
+    "api_url": "http://localhost:5005",
+    "welcome-message": "Welcome to 'Nightmare' room! Please let me know what should I call you?"
+}

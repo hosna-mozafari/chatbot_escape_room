@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: Say 'I dont understand' anytime the user out of context
+  steps:
+  - intent: random_data
+  - action: utter_random_thing
+
+- rule: affirmation
+  steps:
+  - intent: affirmation
+  - action: utter_affirmation

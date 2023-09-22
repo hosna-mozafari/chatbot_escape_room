@@ -1,0 +1,175 @@
+version: "2.0"
+
+stories:
+
+- story: Ask for name
+  steps:
+  - intent: user_give_name
+    entities:
+      - name: Alex
+      - slot_was_set:
+      - name: Alex
+  - action: action_say_name
+  - intent: affirm_to_play
+  - action: action_handle_affirmation
+  - intent: deny_to_play
+  - action: action_handle_affirmation
+  - intent: give_direction
+    entities:
+      - direction: north
+      - slot_was_set:
+      - direction: north
+  - action: action_handle_direction
+
+- story: tell current hint
+  steps:
+  - intent: get_hint
+  - action: action_get_hints
+
+- story: pick something
+  steps:
+  - intent: pick_something
+    entities:
+      - picked_item: laptop
+      - slot_was_set:
+      - picked_item: laptop
+  - action: action_pick_something
+
+- story: look at something
+  steps:
+  - intent: look_at
+    entities:
+        - looked_item: pocket
+        - slot_was_set:
+        - looked_item: pocket
+  - action: action_look_at
+
+- story: give directions
+  steps:
+  - intent: give_direction
+    entities:
+      - direction: south
+      - slot_was_set:
+      - direction: south
+  - action: action_handle_direction
+
+- story: math puzzle
+  steps:
+  - intent: give_math_answer
+    entities:
+      - math_answer: two hundred ninety six
+      - slot_was_set:
+      - math_answer: two hundred ninety six
+  - action: action_math_puzzle
+
+- story: son puzzle
+  steps:
+  - intent: give_son_answer
+    entities:
+      - son_answer: son
+      - slot_was_set:
+      - son_answer: son
+  - action: action_son_puzzle
+
+- story: play activity
+  steps:
+  - intent: play_activity
+    entities:
+      - play_action: chess
+      - slot_was_set:
+      - play_action: chess
+  - action: action_play_activity
+
+- story: use item
+  steps:
+  - intent: use
+    entities:
+        - used_item: red
+        - slot_was_set:
+        - used_item: red
+  - action: action_use_item
+
+- story: send signal
+  steps:
+  - intent: send
+  - action: action_send_signal
+
+- story: activate the power
+  steps:
+  - intent: activate
+  - action: action_activate_puzzle
+
+- story: tareq room
+  steps:
+  - intent: look_at
+    entities:
+      - looked_item: around
+      - slot_was_set:
+      - looked_item: around
+  - action: action_look_at
+  - intent: get_hint
+  - action: action_get_hints
+  - intent: activate
+  - action: action_activate_puzzle
+  - intent: use
+    entities:
+      - used_item: red
+      - slot_was_set:
+      - used_item: red
+  - action: action_use_item
+  - intent: give_math_answer
+    entities:
+      - math_answer: "39104"
+      - slot_was_set:
+      - math_answer: "39104"
+  - action: action_math_puzzle
+  - intent: look_at
+    entities:
+      - looked_item: around
+      - slot_was_set:
+      - looked_item: around
+  - action: action_look_at
+  - intent: get_hint
+  - action: action_get_hints
+  - intent: send
+  - action: action_send_signal
+
+
+- story: tareq room 2
+  steps:
+  - intent: get_hint
+  - action: action_get_hints
+  - intent: look_at
+    entities:
+      - looked_item: around
+      - slot_was_set:
+      - looked_item: around
+  - action: action_look_at
+  - intent: look_at
+    entities:
+      - looked_item: compartment
+      - slot_was_set:
+      - looked_item: compartment
+  - action: action_look_at
+  - intent: give_math_answer
+    entities:
+      - math_answer: "39104"
+      - slot_was_set:
+      - math_answer: "39104"
+  - action: action_math_puzzle
+  - intent: activate
+  - action: action_activate_puzzle
+  - intent: use
+    entities:
+      - used_item: red
+      - slot_was_set:
+      - used_item: red
+  - action: action_use_item
+  - intent: look_at
+    entities:
+      - looked_item: around
+      - slot_was_set:
+      - looked_item: around
+  - action: action_look_at
+  - intent: get_hint
+  - action: action_get_hints

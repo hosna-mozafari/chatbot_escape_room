@@ -1,0 +1,645 @@
+version: "3.0"
+nlu:
+
+- intent: user_give_name
+  examples: |
+    - I am [Andrea](name)
+    - my name is [Robert](name)
+    - they call me [Isabel](name)
+    - I am known as [Felix](name)
+    - (Richard)(name)
+    - I am [Tareq](name)
+    - my name is [Hosna](name)
+    - they call me [Alejandro](name)
+    - I am known as [Till](name)
+    - my name is [Liam](name)
+    - my name is [Emma](name)
+    - my name is [Noah](name)
+    - my name is [Olivia](name)
+    - my name is [William](name)
+    - my name is [Ava](name)
+    - my name is [James](name)
+    - my name is [Isabella](name)
+    - my name is [Oliver](name)
+    - my name is [Sophia](name)
+    - my name is [Benjamin](name)
+    - my name is [Mia](name)
+    - my name is [Elijah](name)
+    - my name is [Charlotte](name)
+    - my name is [Lucas](name)
+    - my name is [Amelia](name)
+    - my name is [Mason](name)
+    - my name is [Harper](name)
+    - my name is [Logan](name)
+    - my name is [Evelyn](name)
+    - my name is [Alexander](name)
+    - my name is [Abigail](name)
+    - my name is [Ethan](name)
+    - my name is [Emily](name)
+    - my name is [Jacob](name)
+    - my name is [Elizabeth](name)
+    - my name is [Michael](name)
+    - my name is [Mila](name)
+    - my name is [Daniel](name)
+    - my name is [Ella](name)
+    - my name is [Henry](name)
+    - my name is [Avery](name)
+    - my name is [Jackson](name)
+    - my name is [Sofia](name)
+    - my name is [Sebastian](name)
+    - my name is [Camila](name)
+    - my name is [Aiden](name)
+    - my name is [Aria](name)
+    - my name is [Matthew](name)
+    - my name is [Scarlett](name)
+    - my name is [Samuel](name)
+    - my name is [Victoria](name)
+    - my name is [David](name)
+    - my name is [Madison](name)
+    - my name is [Joseph](name)
+    - my name is [Luna](name)
+    - my name is [Carter](name)
+    - my name is [Grace](name)
+    - my name is [Owen](name)
+    - my name is [Chloe](name)
+    - my name is [Wyatt](name)
+    - my name is [Penelope](name)
+    - my name is [John](name)
+    - my name is [Layla](name)
+    - my name is [Jack](name)
+    - my name is [Riley](name)
+    - my name is [Luke](name)
+    - my name is [Zoey](name)
+    - my name is [Jayden](name)
+    - my name is [Nora](name)
+    - my name is [Dylan](name)
+    - my name is [Lily](name)
+    - my name is [Grayson](name)
+    - my name is [Eleanor](name)
+    - my name is [Levi](name)
+    - my name is [Hannah](name)
+    - my name is [Isaac](name)
+    - my name is [Lillian](name)
+    - my name is [Gabriel](name)
+    - my name is [Addison](name)
+    - my name is [Julian](name)
+    - my name is [Aubrey](name)
+    - my name is [Mateo](name)
+    - my name is [Ellie](name)
+    - my name is [Anthony](name)
+    - my name is [Stella](name)
+    - my name is [Jaxon](name)
+    - my name is [Natalie](name)
+    - my name is [Lincoln](name)
+    - my name is [Zoe](name)
+    - my name is [Joshua](name)
+    - my name is [Leah](name)
+    - my name is [Christopher](name)
+    - my name is [Hazel](name)
+    - my name is [Andrew](name)
+    - my name is [Violet](name)
+    - my name is [Theodore](name)
+    - my name is [Aurora](name)
+    - my name is [Caleb](name)
+    - my name is [Savannah](name)
+    - my name is [Ryan](name)
+    - my name is [Audrey](name)
+    - my name is [Asher](name)
+    - my name is [Brooklyn](name)
+    - my name is [Nathan](name)
+    - my name is [Bella](name)
+    - my name is [Thomas](name)
+    - my name is [Claire](name)
+    - my name is [Leo](name)
+    - my name is [Skylar](name)
+    - my name is [Isaiah](name)
+    - my name is [Lucy](name)
+    - my name is [Charles](name)
+    - my name is [Paisley](name)
+    - my name is [Josiah](name)
+    - my name is [Everly](name)
+    - my name is [Hudson](name)
+    - my name is [Noah](name)
+    - my name is [Emilia](name)
+    - my name is [Matteo](name)
+    - my name is [Elias](name)
+    - my name is [Finn](name)
+    - my name is [Leon](name)
+    - my name is [Theo](name)
+    - my name is [Lina](name)
+    - my name is [Paul](name)
+    - my name is [Emil](name)
+    - my name is [Leni](name)
+    - my name is [Ben](name)
+    - my name is [Clara](name)
+    - my name is [Louis](name)
+    - my name is [Marie](name)
+    - my name is [Luca](name)
+    - my name is [Lia](name)
+    - my name is [Leo](name)
+    - my name is [Mathilda](name)
+    - my name is [Jonas](name)
+    - my name is [Ida](name)
+    - my name is [Jakob](name)
+    - my name is [Lilly](name)
+    - my name is [Lukas](name)
+    - my name is [Luisa](name)
+    - my name is [Anna](name)
+    - my name is [Anton](name)
+    - my name is [Maximilian](name)
+    - my name is [Frieda](name)
+    - my name is [Milan](name)
+    - my name is [Maja](name)
+    - my name is [Jonah](name)
+    - my name is [Amelie](name)
+    - my name is [Oskar](name)
+    - my name is [Jannis](name)
+    - my name is [Lena](name)
+    - my name is [Mira](name)
+    - my name is [Mohammed](name)
+    - my name is [Johanna](name)
+    - my name is [Moritz](name)
+    - my name is [Lara](name)
+    - my name is [Samuel](name)
+    - my name is [Lotta](name)
+    - my name is [Karl](name)
+    - my name is [Nora](name)
+    - my name is [Mats](name)
+    - my name is [Malia](name)
+    - my name is [Adam](name)
+    - my name is [Juna](name)
+    - my name is [Linus](name)
+    - my name is [Luna](name)
+    - my name is [Alexander](name)
+    - my name is [Sarah](name)
+    - my name is [Raphael](name)
+    - my name is [Elisa](name)
+    - my name is [Aaron](name)
+    - my name is [Jonathan](name)
+    - my name is [Romy](name)
+    - my name is [Erik](name)
+    - my name is [Philipp](name)
+    - my name is [Maria](name)
+    - my name is [Carlo](name)
+    - my name is [Elena](name)
+    - my name is [Hannes](name)
+    - my name is [Helena](name)
+    - my name is [Tom](name)
+    - my name is [Melina](name)
+    - my name is [Marlon](name)
+    - my name is [Marlene](name)
+    - my name is [Nikklas](name)
+    - my name is [Hailey](name)
+    - my name is [Antonia](name)
+    - my name is [Malik](name)
+    - my name is [Leonard](name)
+    - my name is [Alina](name)
+    - my name is [Eva](name)
+    - my name is [Valentin](name)
+    - my name is [Tilda](name)
+    - my name is [Amira](name)
+    - my name is [Tim](name)
+    - my name is [Toni](name)
+    - my name is [Kilian](name)
+    - my name is [Carla](name)
+    - my name is [Adrian](name)
+    - my name is [Fiete](name)
+    - my name is [Paulina](name)
+    - my name is [Josephine](name)
+    - my name is [Vincent](name)
+    - my name is [Pia](name)
+    - my name is [Lennard](name)
+    - my name is [Liana](name)
+    - my name is [Arthur](name)
+    - my name is [Jasmin](name)
+    - my name is [Luana](name)
+    - my name is [Anastasia](name)
+    - my name is [Freya](name)
+    - my name is [Malte](name)
+    - my name is [Leonardo](name)
+    - my name is [Alekdandr](name)
+    - my name is [Olga](name)
+    - my name is [Sergey](name)
+    - my name is [Svetlana](name)
+    - my name is [Tatyana](name)
+    - my name is [Peter](name)
+    - my name is [Natalya](name)
+    - my name is [Irina](name)
+    - my name is [Dmitry](name)
+    - my name is [Michael](name)
+    - my name is [Vladimir](name)
+    - my name is [Jose](name)
+    - my name is [Ivan](name)
+    - my name is [Jean](name)
+    - my name is [Pavel](name)
+    - my name is [Roman](name)
+    - my name is [Denis](name)
+    - my name is [Christine](name)
+    - my name is [Patrik](name)
+    - my name is [Vera](name)
+    - my name is [Lyubov](name)
+    - my name is [Juan](name)
+    - my name is [Anne](name)
+    - my name is [Giovanni](name)
+    - my name is [Laura](name)
+    - my name is [Sandra](name)
+    - my name is [Valentina](name)
+    - my name is [Klaus](name)
+    - my name is [Claude](name)
+    - my name is [Manfred](name)
+    - my name is [Marta](name)
+    - my name is [Frank](name)
+    - my name is [Heinz](name)
+    - my name is [Walter](name)
+    - my name is [Sabine](name)
+    - my name is [Rita](name)
+    - my name is [Mark](name)
+    - my name is [Konstantine](name)
+    - my name is [Nicole](name)
+    - my name is [Luigi](name)
+    - my name is [Teresa](name)
+    - my name is [Ruslan](name)
+    - my name is [Marek](name)
+    - my name is [Lucia](name)
+    - my name is [Tamara](name)
+    - my name is [Rene](name)
+    - my name is [Susanne](name)
+    - my name is [Mary](name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- intent: random_data
+  examples: |
+    - pineaple is green
+    - What is hungry
+    - What is your favorite type of fruit?
+    - Tell me about a time when you faced a difficult decision.
+    - What is the capital of Australia?
+    - What do you think is the meaning of life?
+    - Have you ever traveled to a foreign country? If so, where did you go and what was your experience like?
+    - What is the most interesting fact you know?
+    - Can you name three famous painters and one painting from each?
+    - Do you believe in aliens?
+    - Describe your dream house.
+    - The quick brown fox jumps over the lazy dog.
+    - What is your favorite type of cuisine?
+    - Tell me about a time when you accomplished something you were proud of.
+    - What is the highest mountain in the world?
+
+- intent: affirmation
+  examples: |
+    - okay
+    - ok
+    - fine
+    - alright
+    - all right
+    - right
+    - very well
+    - very good
+    - agreed
+    - oke
+    - okey-dokey
+    - roger
+    - well
+
+- intent: get_hint
+  examples: |
+    - help me
+    - help
+    - give me a hint
+    - could you help me?
+    - can you give me a hand?
+    - I need help
+    - what should I do?
+    - what am I supposed to do now?
+    - What do I need to do?
+    - I do not know
+    - I don't know
+    - I do not know what to do
+
+
+- intent: pick_something
+  examples: |
+    - pick [laptop ios](picked_item)
+    - pick [laptop windows](picked_item)
+    - pick the [windows](picked_item)
+    - pick the [ios] (picked_item)
+    - pick [suit](picked_item)
+    - pick space [suit](picked_item)
+    - grab the [computer ios](picked_item)
+    - select the [laptop with the ios system](picked_item)
+    - select the [suit](picked_item)
+    - choose the [computer with windows opearting system](picked_item)
+    - I choose the [apple laptop](picked_item)
+    - I choose the [suit](picked_item)
+    - pick [window](picked_item)
+    - pick [picture](picked_item)
+    - grab [cup](picked_item)
+    - get [dollp](picked_item)
+    - select [chair](picked_item)
+    - grab [pen](picked_item)
+    - grab [suit](picked_item)
+    - get [notebook](picked_item)
+    - get [suit](picked_item)
+    - choose [paper](picked_item)
+    - take [windows](picked_item)
+    - take [apple](picked_item)
+    - [windows](picked_item)
+    - [mac](picked_item)
+
+- intent: affirm_to_play
+  examples: |
+    - yes
+    - yeah
+    - sure
+    - hell yeah
+    - yeap
+    - I want to play
+    - of course
+    - why not
+    - yes, I do
+    - let's play
+    - Yes I am
+    - I am ready 
+
+- intent: deny_to_play
+  examples: |
+    - no
+    - naah
+    - nope
+    - hell nope
+    - not really
+    - not yet
+    - not now
+    - I am not ready
+    - not ready
+    - I don't want to
+    - not sure
+    - give me more time
+
+- intent: give_direction
+  examples: |
+    - [north](direction)
+    - [south](direction)
+    - [west](direction)
+    - [east](direction)
+    - no where
+    - I want to stay here
+    - anywhere
+    - go up
+    - left
+    - right
+    - up
+    - down
+    - I don't want to go
+    - there
+    - go to the [north](direction)
+    - go [south](direction)
+    - I want go [west](direction)
+    - Let's go [east](direction)
+
+- intent: give_son_answer
+  examples: |
+    - [son](son_answer)
+    - the answer is [son](son_answer)
+    - [daughter](son_answer)
+    - I believe [son](son_answer)
+    - it is [son](son_answer)
+    - Is it [daughter](son_answer)?
+    - [father](son_answer)
+    - [mother](son_answer)
+    - [sister](son_answer)
+    - [brother](son_answer)
+    - [grandfather](son_answer)
+    - [grandmother](son_answer)
+    - [niece](son_answer)
+    - [nephew](son_answer)
+    - [grandpa](son_answer)
+    - [grandma](son_answer)
+    - [cousin](son_answer)
+    - [aunt](son_answer)
+    - [uncle](son_answer)
+
+- intent: give_math_answer
+  examples: |
+    - [296](math_answer)
+    - [two hundred ninety six](math_answer)
+    - I guess is [300](math_answer)
+    - [three hundred](math_answer)
+    - I think is [150](math_answer)
+    - [hundred fifty](math_answer)
+    - I believe is [44](math_answer)
+    - [forty four](math_answer)
+    - Is it [123](math_answer)?
+    - [hundred twenty three](math_answer)
+    - [5555](math_answer)
+    - [437](math_answer)
+    - [235](math_answer)
+    - [987](math_answer)
+    - [163](math_answer)
+
+- intent: look_at
+  examples: |
+    - look inside the [pocket](looked_item)
+    - look at the [windows](looked_item)
+    - look at the [door](looked_item)
+    - look at the [wall](looked_item)
+    - look under the [table](looked_item)
+    - look behind the [board](looked_item)
+    - look [around](looked_item)
+    - check the [chair](looked_item)
+    - inspect the [captain](looked_item)
+    - examine [communication](looked_item)
+    - take a closer look to the [console](looked_item)
+    - go examine the [airlock](looked_item)
+    - check [door](looked_item)
+    - check the [wires](looked_item)
+    - inspect [screen](looked_item)
+    - check the [compartment](looked_item)
+    - inspect [compartment](looked_item)
+    - look at [compartment](looked_item)
+    - explore [surroundings](looked_item)
+
+- intent: activate
+  examples: |
+    - activate power
+    - turn on power
+    - turn on the switch
+    - move the switch on
+    - turn it on
+
+
+- intent: play_activity
+  examples: |
+    - he plays [chess](play_action)
+    - he plays the [piano](play_action)
+    - playing [basketball](play_action) with Rayan
+    - playing [football](play_action)
+    - play [volleybal](play_action)
+    - she is playing [tenis](play_action)
+    - playing [guitar](play_action)
+    - playing [videogames](play_action)
+
+- intent: use
+  examples: |
+    - use [red cable 1a](used_item)
+    - connect the [red cable 1a](used_item)
+    - connect [1a](used_item)
+    - use [2a](used_item)
+    - reconnect [3a](used_item)
+    - reconnect [red cable 1a](used_item)
+    - use the [green cable 2a](used_item)
+    - connect the [green cable 2a](used_item)
+    - reconnect [green cable 2a](used_item)
+    - use the [blue cable 3a](used_item)
+    - connect the [blue cable 3a](used_item)
+    - reconnect [blue cable 3a](used_item)
+    - press [left button](used_item)
+    - use the [right button](used_item)
+    - push the [left button](used_item)
+    - push [right](used_item)
+    - hold down [right button](used_item)
+    - press the [left](used_item) one
+    - touch the [right](used_item) one
+    - hold down [center button](used_item)
+    - press the [center](used_item) one
+    - touch the [center](used_item) one
+
+- intent: send
+  examples: |
+    - send signal
+    - dispatch the signal
+    - forward signal
+    - post signal
+    - deliver the signal
+    - ship signal
+    - shoot the signal
+    - emit signal
+    - shoot the signal
